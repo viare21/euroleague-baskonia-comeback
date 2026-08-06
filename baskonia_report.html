@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Baskonia: Debunking (and Confirming) the Comeback Myth</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #F2F5D9;
+    --bg-card: #FBFCEE;
+    --border: #D6DFA8;
+    --text: #16233F;
+    --text-muted: #5B6650;
+    --green: #3E8E4F;
+    --coral: #C6564F;
+    --gold: #B8860B;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ---------- HERO ---------- */
+
+  .hero {
+    padding: 96px 0 64px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .eyebrow {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: clamp(32px, 5vw, 46px);
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin-bottom: 20px;
+    color: var(--text);
+  }
+
+  .subtitle {
+    font-size: 18px;
+    color: var(--text-muted);
+    max-width: 58ch;
+  }
+
+  /* ---------- SCOREBOARD ---------- */
+
+  .scoreboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 40px 0 0;
+  }
+
+  .stat {
+    background: var(--bg-card);
+    padding: 24px 16px;
+    text-align: center;
+  }
+
+  .stat-value {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 600;
+    font-size: clamp(22px, 4vw, 30px);
+    color: var(--green);
+  }
+
+  .stat-label {
+    font-size: 12.5px;
+    color: var(--text-muted);
+    margin-top: 6px;
+    letter-spacing: 0.02em;
+  }
+
+  /* ---------- SECTIONS ---------- */
+
+  section {
+    padding: 56px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  section:last-of-type { border-bottom: none; }
+
+  h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    color: var(--text);
+  }
+
+  h2 .tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--gold);
+  }
+
+  p { margin-bottom: 16px; color: var(--text); }
+
+  p:last-child { margin-bottom: 0; }
+
+  strong { color: var(--text); }
+
+  a { color: var(--green); text-decoration: none; border-bottom: 1px solid rgba(62,142,79,0.35); }
+  a:hover { border-bottom-color: var(--green); }
+
+  ol, ul { padding-left: 20px; margin-bottom: 16px; color: var(--text); }
+  li { margin-bottom: 10px; }
+  li::marker { color: var(--gold); }
+
+  /* ---------- TABLE ---------- */
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+    font-size: 14.5px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  th, td {
+    text-align: left;
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  th {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--text-muted);
+  }
+
+  td.num { font-family: 'IBM Plex Mono', monospace; }
+
+  tr.highlight td { color: var(--green); }
+
+  /* ---------- IMAGES ---------- */
+
+  figure { margin: 28px 0; }
+
+  figure img {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    display: block;
+    box-shadow: 0 8px 24px rgba(22,35,63,0.12);
+  }
+
+  figcaption {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  /* ---------- CALLOUT ---------- */
+
+  .callout {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--gold);
+    border-radius: 8px;
+    padding: 18px 20px;
+    margin: 24px 0;
+    font-size: 15px;
+    color: var(--text-muted);
+  }
+
+  .callout strong { color: var(--gold); }
+
+  /* ---------- FOOTER ---------- */
+
+  footer {
+    padding: 48px 0 80px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .btn {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13.5px;
+    padding: 12px 20px;
+    border-radius: 7px;
+    border: 1px solid var(--border);
+    color: var(--text);
+    background: var(--bg-card);
+  }
+
+  .btn.primary {
+    background: var(--green);
+    color: #FBFCEE;
+    border: none;
+    font-weight: 600;
+  }
+
+  @media (max-width: 560px) {
+    .scoreboard { grid-template-columns: 1fr; }
+    .hero { padding: 64px 0 48px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <div class="hero">
+    <div class="eyebrow">Baskonia · Play-by-Play Data · All Seasons</div>
+    <h1>Baskonia: debunking (and confirming) the comeback myth</h1>
+    <p class="subtitle">A play-by-play data analysis testing a specific claim about home court advantage: does the Fernando Buesa Arena crowd genuinely help Baskonia come back from big deficits?</p>
+
+    <div class="scoreboard">
+      <div class="stat">
+        <div class="stat-value">30.8%</div>
+        <div class="stat-label">Baskonia home comeback rate (15+ pt deficit)</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">+8.6</div>
+        <div class="stat-label">points above league average, at home</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">p = 0.14</div>
+        <div class="stat-label">not statistically significant (home gap)</div>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <h2><span class="tag">01</span> Background</h2>
+    <p>Baskonia's Fernando Buesa Arena has a reputation as one of the loudest, most intense atmospheres in EuroLeague basketball. This project tests a concrete version of that claim using play-by-play data: <strong>when Baskonia falls behind by a large margin, does it recover more often at home than on the road, and more often than the rest of the league?</strong></p>
+    <p>Rather than relying on anecdote, the analysis is built directly from event-by-event scoring data across nearly two decades of EuroLeague games.</p>
+  </section>
+
+  <section>
+    <h2><span class="tag">02</span> Data &amp; tools</h2>
+    <ul>
+      <li><strong>Data source:</strong> <a href="https://www.kaggle.com/datasets/babissamothrakis/euroleague-datasets" target="_blank">Euroleague &amp; Eurocup Datasets</a> (Kaggle), specifically the play-by-play file, which logs every individual event (shots, rebounds, fouls, turnovers, etc.) with a running score</li>
+      <li><strong>Tools:</strong> Python, pandas, matplotlib, statsmodels, scipy</li>
+      <li><strong>Scope:</strong> 541 Baskonia games (all seasons available), plus the full EuroLeague play-by-play dataset (2.6M+ events) for league-wide comparison</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="tag">03</span> Defining "comeback"</h2>
+    <p>Before running any analysis, it's worth being explicit about what counts as a real comeback, since a vague definition would make the whole exercise meaningless.</p>
+    <p>An initial idea was to check the score at the exact start of the 4th quarter and see how often a 10-point deficit at that point turned into a win. This produced a very clean setup, but the results were nearly unusable: Baskonia came back from a 10-point 4th-quarter deficit only twice in over 100 chances (1 out of 32 at home, 1 out of 90 away). The event was too rare to say anything meaningful about it.</p>
+    <p>The final, more robust definition:</p>
+    <ol>
+      <li>Find the <strong>single worst deficit</strong> Baskonia faced at any point during the game (not just at the start of the 4th quarter)</li>
+      <li>Only consider games where that deficit was <strong>15 points or worse</strong></li>
+      <li>Check whether, from that low point onward, the score was tied or Baskonia took the lead at any point before the final buzzer</li>
+    </ol>
+    <p>This is a lower bar than "won the game": it asks whether the team showed it could climb back into contention, not whether it completed the entire comeback and won. That trade-off is deliberate: it produces a large enough sample to say something statistically meaningful, while still requiring a real, sizeable deficit (15+ points) to qualify.</p>
+  </section>
+
+  <section>
+    <h2><span class="tag">04</span> Results: Baskonia vs EuroLeague average</h2>
+
+    <figure>
+      <img src="images/baskonia_comeback_rate.png" alt="Baskonia comeback rate vs EuroLeague average">
+      <figcaption>Comeback rate after a 15+ point deficit, Baskonia vs EuroLeague average</figcaption>
+    </figure>
+
+    <table>
+      <thead>
+        <tr><th>Venue</th><th>Baskonia rate</th><th>League rate</th></tr>
+      </thead>
+      <tbody>
+        <tr class="highlight"><td>Home</td><td class="num">30.8% (16/52)</td><td class="num">22.2% (217/978)</td></tr>
+        <tr class="highlight"><td>Away</td><td class="num">14.3% (17/119)</td><td class="num">11.4% (213/1,864)</td></tr>
+      </tbody>
+    </table>
+
+    <p>Two things stand out immediately:</p>
+    <ul>
+      <li>The <strong>league-wide home advantage is real</strong>: across all of EuroLeague, teams recover from big deficits nearly twice as often at home (22.2%) as on the road (11.4%). This isn't unique to Baskonia, it's a structural feature of the sport.</li>
+      <li><strong>Baskonia outperforms the league average in both settings</strong>, but the gap is far more pronounced at home (+8.6 points over the league average) than away (+2.9 points).</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="tag">05</span> Is the gap statistically significant?</h2>
+    <p>A large percentage gap doesn't automatically mean a real effect. With a relatively small sample of "big deficit" games (52 at home, 119 away), some of that gap could be due to chance. Two standard tests for comparing proportions were run to check.</p>
+
+    <table>
+      <thead>
+        <tr><th>Venue</th><th>Two-proportion z-test (p)</th><th>Fisher's exact test (p)</th><th>Odds ratio</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Home</td><td class="num">0.14</td><td class="num">0.17</td><td class="num">1.56</td></tr>
+        <tr><td>Away</td><td class="num">0.35</td><td class="num">0.37</td><td class="num">1.29</td></tr>
+      </tbody>
+    </table>
+
+    <p>Neither test reaches the conventional significance threshold (p &lt; 0.05) in either venue. In plain terms: <strong>the pattern observed in the data is real, but the sample isn't large enough to rule out chance as an explanation</strong>, particularly away from home, where the gap is small to begin with.</p>
+    <div class="callout">The home gap comes closer to significance and has a larger effect size (odds ratio of 1.56, meaning Baskonia's odds of a comeback at home are about 56% higher than the league average), so it's the more interesting of the two results, but it should be read as <strong>suggestive</strong>, not <strong>confirmed</strong>.</div>
+  </section>
+
+  <section>
+    <h2><span class="tag">06</span> Takeaways</h2>
+    <ul>
+      <li>A 10-point deficit at the start of the 4th quarter is too rare an event to analyze reliably for a single team. Redefining the metric around the game's overall worst deficit (15+ points, any point in the game) produced a far more usable sample.</li>
+      <li>Home court advantage on comebacks is a real, league-wide pattern in EuroLeague, not something specific to Baskonia.</li>
+      <li>Baskonia's comeback rate is higher than the league average both home and away, and the gap is considerably larger at home, consistent with (though not proof of) the Fernando Buesa Arena's reputation.</li>
+      <li>Statistical testing (z-test and Fisher's exact test) does not confirm the difference as significant at conventional thresholds, mainly due to sample size, a useful reminder that an interesting pattern in the data isn't the same as a proven effect.</li>
+      <li>A larger sample (e.g. a lower deficit threshold, or pooling multiple seasons of a wider set of "loud arena" teams) would be needed to state this claim with more statistical confidence.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <a class="btn primary" href="https://github.com/viare21/euroleague-baskonia-comeback" target="_blank">View code on GitHub</a>
+    <a class="btn" href="https://federicoviarengo.com/" target="_blank">Back to portfolio</a>
+  </footer>
+
+</div>
+
+</body>
+</html>
